@@ -5,6 +5,9 @@ const messageGenerator = () => {
     const word4 = ["because", "and", "but", "nonetheless", "or"];
     const word5 = ["ice-cream", "beer", "Eragon", "football", "apple"];
 
-    const randomIndex = Math.random(Math.floor() * 4)
-    document.getElementById("message").innerText = word1[randomIndex], word2[randomIndex], word3[randomIndex], word4[randomIndex], word5[randomIndex];
+    const rand = (arr) => arr[Math.floor(Math.random() * 5)]
+
+    sentence = `${rand(word1)} ${rand(word2)} ${rand(word3)} ${rand(word4)} ${rand(word5)}`;
+
+    document.getElementById("message").innerText = sentence;
 }
